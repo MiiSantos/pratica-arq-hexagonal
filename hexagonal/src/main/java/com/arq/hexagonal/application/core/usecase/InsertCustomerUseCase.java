@@ -5,13 +5,13 @@ import com.arq.hexagonal.application.ports.in.InsertCustomerInputPort;
 import com.arq.hexagonal.application.ports.out.FindAddressByZipCodeOutputPort;
 import com.arq.hexagonal.application.ports.out.InsertCustomerOutputPort;
 
-public class InsertUserUseCase implements InsertCustomerInputPort {
+public class InsertCustomerUseCase implements InsertCustomerInputPort {
 
     private final FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort;
 
     private final InsertCustomerOutputPort insertCustomerOutputPort;
 
-    public InsertUserUseCase(FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort, InsertCustomerOutputPort insertCustomerOutputPort) {
+    public InsertCustomerUseCase(FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort, InsertCustomerOutputPort insertCustomerOutputPort) {
         this.findAddressByZipCodeOutputPort = findAddressByZipCodeOutputPort;
         this.insertCustomerOutputPort = insertCustomerOutputPort;
     }
