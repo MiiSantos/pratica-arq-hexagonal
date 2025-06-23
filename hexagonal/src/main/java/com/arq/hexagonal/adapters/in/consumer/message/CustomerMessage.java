@@ -14,5 +14,6 @@ public class CustomerMessage {
     private String name;
     private Address address;
     private String cpf;
+    private String zipCode;
     private Boolean isValid;
 }
