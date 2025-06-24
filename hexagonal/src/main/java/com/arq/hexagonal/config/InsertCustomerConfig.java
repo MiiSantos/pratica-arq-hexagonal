@@ -14,10 +14,8 @@ public class InsertCustomerConfig {
     public InsertCustomerUseCase insertCustomerUseCase(
             FindAddressByZipCodeAdapter findAddressByZipCodeAdapter,
             InsertCustomerAdapter insertCustomerAdapter,
-                    SendCpfValidationAdpater sendCpfValidationAdpater
+            SendCpfValidationAdpater sendCpfValidationAdpater
     ) {
-        return new InsertCustomerUseCase(findAddressByZipCodeAdapter,
-                                            insertCustomerAdapter,
-                                            sendCpfValidationAdpater);
+        return new InsertCustomerUseCase(findAddressByZipCodeAdapter, insertCustomerAdapter, sendCpfValidationAdpater);
     }
 }

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 public class UpdateCustomerAdapter implements UpdateCustomerOutputPort {
     @Autowired
     private CustomerRepository customerRepository;
+
     @Autowired
     private CustomerEntityMapper customerEntityMapper;
 
