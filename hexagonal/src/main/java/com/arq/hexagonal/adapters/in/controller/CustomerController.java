@@ -39,15 +39,15 @@ public class CustomerController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<CustomerResponse> findById(@PathVariable final String id) {
+    @GetMapping("/{customerId}")
+    public ResponseEntity<CustomerResponse> findById(@PathVariable("customerId")  final String id) {
         var customer = findCustomerByIdInputPort.find(id);
         var customerResponse = customerMapper.toCustomerResponse(customer);
         return ResponseEntity.ok().body(customerResponse);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Void> update(@PathVariable final String id,
+    @PutMapping("/{customerId}")
+    public ResponseEntity<Void> update(@PathVariable("customerId") final String id,
                                        @Valid @RequestBody CustomerRequest customerRequest) {
         Customer customer = customerMapper.toCustomer(customerRequest);
         customer.setId(id);
@@ -55,8 +55,8 @@ public class CustomerController {
         return ResponseEntity.noContent().build();
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable final String id) {
+    @DeleteMapping("/{customerId}")
+    public ResponseEntity<Void> delete(@PathVariable("customerId")  final String id) {
         deleteCustomerByIdInputPort.delete(id);
         return ResponseEntity.noContent().build();
     }

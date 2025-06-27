@@ -2,6 +2,7 @@ package com.arq.hexagonal.adapters.in.controller.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
+import lombok.Getter;
 
 @Data
 public class CustomerRequest {
